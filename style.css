@@ -1,0 +1,84 @@
+:root {
+  --img_margin: 5%;
+  --border_radius: 1rem;
+  --padding: 10px 20px;
+  --font_size: 1.2rem;
+  --button_margin: 1rem;
+  --primary-color: #ff4d6d; /* Vibrant pink */
+  --secondary-color: #ffe5ec; /* Soft pastel pink */
+  --text-color: #fff;
+  --hover-color: #ff1f4d;
+  --shadow-color: rgba(255, 77, 109, 0.4);
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  background: radial-gradient(circle, #ffd6dc, #ff4d6d); /* Smooth gradient */
+  font-family: 'Poppins', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+* {
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+#buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--button_margin);
+}
+
+button {
+  padding: var(--padding);
+  font-size: var(--font_size);
+  background: var(--primary-color);
+  border: none;
+  outline: none;
+  border-radius: var(--border_radius);
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+  box-shadow: 0 4px 10px var(--shadow-color);
+}
+
+#yes {
+  background-color: lightgreen;
+  transform: scale(1.2);
+  z-index: 1;
+}
+
+#no {
+  background-color: #ff1050;
+  z-index: 0;
+}
+
+button:hover {
+  background: var(--hover-color);
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px var(--shadow-color);
+}
+
+/* Heartbeat animation */
+@keyframes heartbeat {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+img {
+  width: 40vw;
+  margin-top: var(--img_margin);
+  margin-bottom: var(--img_margin);
+  animation: heartbeat 1.5s infinite ease-in-out;
+  filter: drop-shadow(0 4px 10px var(--shadow-color));
+}
