@@ -48,7 +48,7 @@ function handleYES() {
   NO_BTN.remove();
   YES_BTN.remove();
 
-  IMAGE.src = "/assets/images/Letter.png";
+  IMAGE.src = "./assets/images/Letter.png";
   HEADER.innerText = "THANK YOU!! HAPPY VALENTINE'S DAY PRINCESS!!! I LOVE YOU SM";
 }
 
